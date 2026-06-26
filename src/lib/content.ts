@@ -20,12 +20,12 @@ export const paperHref = assetPath("/paper-assets/ECCV_2026_EgoEverything.pdf");
 export const navItems = [
   { label: "Overview", href: "#overview" },
   { label: "Figures", href: "#figures" },
-  { label: "Dataset", href: "#dataset" },
+  { label: "Dataset", href: "https://huggingface.co/datasets/roxqtang/EgoEverything" },
   { label: "Benchmark", href: "#benchmark" },
   { label: "Examples", href: "#examples" },
   { label: "Leaderboard", href: "#leaderboard" },
   { label: "Cite", href: "#citation" },
-  { label: "Code", href: "https://github.com/roxqtang/EgoEverything" }
+  { label: "Code", href: "https://github.com/SAI-Lab-NYU/EgoEverything-Dataset" }
 ];
 
 export const sectionIndex = [
@@ -40,8 +40,8 @@ export const sectionIndex = [
 
 export const primaryLinks = [
   { label: "Paper", href: paperHref, icon: FileText },
-  { label: "Dataset", href: "#dataset", icon: Database },
-  { label: "Code", href: "https://github.com/roxqtang/EgoEverything", icon: Github },
+  { label: "Dataset", href: "https://huggingface.co/datasets/roxqtang/EgoEverything", icon: Database },
+  { label: "Code", href: "https://github.com/SAI-Lab-NYU/EgoEverything-Dataset", icon: Github },
   { label: "Leaderboard", href: "#leaderboard", icon: Trophy }
 ];
 
@@ -192,9 +192,10 @@ export const failureFactors = [
 
 export const footerLinks = [
   { label: "Paper", href: paperHref, icon: BookOpen },
-  { label: "Code", href: "https://github.com/roxqtang/EgoEverything", icon: Code2 },
-  { label: "Dataset", href: "#dataset", icon: Database },
+  { label: "Code", href: "https://github.com/SAI-Lab-NYU/EgoEverything-Dataset", icon: Code2 },
+  { label: "Dataset", href: "https://huggingface.co/datasets/roxqtang/EgoEverything", icon: Database },
   { label: "Contact", href: "mailto:egoeverything@example.edu", icon: Mail }
 ];
+
 
 
