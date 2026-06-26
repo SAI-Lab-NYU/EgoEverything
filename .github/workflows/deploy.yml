@@ -37,7 +37,7 @@ jobs:
         run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: 1
-          NEXT_PUBLIC_BASE_PATH: /egoeverything.github.io
+          NEXT_PUBLIC_BASE_PATH: /EgoEverything
 
       - name: Disable Jekyll
         run: touch out/.nojekyll
@@ -57,4 +57,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
 
