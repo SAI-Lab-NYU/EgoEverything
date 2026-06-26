@@ -53,11 +53,14 @@ export function Hero() {
             <div className="grid grid-cols-1 gap-2 min-[460px]:grid-cols-2 sm:grid-cols-4">
               {primaryLinks.map((link) => {
                 const Icon = link.icon;
+                const isExternal = link.href.startsWith("http");
 
                 return (
                   <a
                     key={link.label}
                     href={link.href}
+                    target={isExternal ? "_blank" : undefined}
+                    rel={isExternal ? "noreferrer" : undefined}
                     className="group flex min-h-16 items-center justify-between border border-ink/18 bg-paper px-4 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ink transition hover:border-ink hover:bg-ink hover:text-paper"
                   >
                     <span className="flex items-center gap-2">
@@ -84,3 +87,4 @@ export function Hero() {
     </section>
   );
 }
+

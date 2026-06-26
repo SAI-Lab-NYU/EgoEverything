@@ -23,15 +23,21 @@ export function Navbar() {
         </a>
 
         <div className="hidden items-center gap-1 lg:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="px-3 py-2 text-xs font-semibold uppercase tracking-[0.11em] text-muted transition hover:text-ink"
-            >
-              {item.label}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const isExternal = item.href.startsWith("http");
+
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noreferrer" : undefined}
+                className="px-3 py-2 text-xs font-semibold uppercase tracking-[0.11em] text-muted transition hover:text-ink"
+              >
+                {item.label}
+              </a>
+            );
+          })}
         </div>
 
         <a
@@ -45,3 +51,4 @@ export function Navbar() {
     </header>
   );
 }
+

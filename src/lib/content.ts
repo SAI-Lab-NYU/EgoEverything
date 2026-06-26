@@ -22,7 +22,7 @@ export const navItems = [
   { label: "Examples", href: "#examples" },
   { label: "Leaderboard", href: "#leaderboard" },
   { label: "Paper", href: "#paper" },
-  { label: "Code", href: "#code" }
+  { label: "Code", href: "https://github.com/roxqtang/EgoEverything" }
 ];
 
 export const sectionIndex = [
@@ -38,7 +38,7 @@ export const sectionIndex = [
 export const primaryLinks = [
   { label: "Paper", href: "#paper", icon: FileText },
   { label: "Dataset", href: "#dataset", icon: Database },
-  { label: "Code", href: "#code", icon: Github },
+  { label: "Code", href: "https://github.com/roxqtang/EgoEverything", icon: Github },
   { label: "Leaderboard", href: "#leaderboard", icon: Trophy }
 ];
 
@@ -191,8 +191,9 @@ export const failureFactors = [
 
 export const footerLinks = [
   { label: "Paper", href: "#paper", icon: BookOpen },
-  { label: "Code", href: "#code", icon: Code2 },
+  { label: "Code", href: "https://github.com/roxqtang/EgoEverything", icon: Code2 },
   { label: "Dataset", href: "#dataset", icon: Database },
   { label: "Contact", href: "mailto:egoeverything@example.edu", icon: Mail }
 ];
+
 

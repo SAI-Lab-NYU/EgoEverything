@@ -30,12 +30,15 @@ export function CitationSection() {
           <div className="mt-8 grid grid-cols-2 gap-2 sm:max-w-lg">
             {footerLinks.map((link) => {
               const Icon = link.icon;
+              const isExternal = link.href.startsWith("http");
 
               return (
                 <a
                   key={link.label}
                   id={link.label === "Code" ? "code" : undefined}
                   href={link.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noreferrer" : undefined}
                   className="flex items-center justify-between border border-ink/15 bg-paper px-3 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition hover:border-ink hover:bg-ink hover:text-paper"
                 >
                   <span className="flex items-center gap-2">
@@ -67,3 +70,4 @@ export function CitationSection() {
     </section>
   );
 }
+
