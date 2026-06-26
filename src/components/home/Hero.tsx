@@ -53,7 +53,7 @@ export function Hero() {
             <div className="grid grid-cols-1 gap-2 min-[460px]:grid-cols-2 sm:grid-cols-4">
               {primaryLinks.map((link) => {
                 const Icon = link.icon;
-                const isExternal = link.href.startsWith("http");
+                const isExternal = !link.href.startsWith("#");
 
                 return (
                   <a

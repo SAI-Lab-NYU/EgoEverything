@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { navItems } from "@/lib/content";
+import { navItems, paperHref } from "@/lib/content";
 
 export function Navbar() {
   return (
@@ -41,7 +41,9 @@ export function Navbar() {
         </div>
 
         <a
-          href="#paper"
+          href={paperHref}
+          target="_blank"
+          rel="noreferrer"
           className="inline-flex h-10 items-center gap-2 border border-ink bg-ink px-4 text-xs font-semibold uppercase tracking-[0.13em] text-paper transition hover:bg-transparent hover:text-ink"
         >
           View Paper

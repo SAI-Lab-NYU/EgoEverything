@@ -14,6 +14,9 @@ import {
   Trophy
 } from "lucide-react";
 
+const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+export const paperHref = assetPath("/paper-assets/ECCV_2026_EgoEverything.pdf");
+
 export const navItems = [
   { label: "Overview", href: "#overview" },
   { label: "Figures", href: "#figures" },
@@ -21,7 +24,7 @@ export const navItems = [
   { label: "Benchmark", href: "#benchmark" },
   { label: "Examples", href: "#examples" },
   { label: "Leaderboard", href: "#leaderboard" },
-  { label: "Paper", href: "#paper" },
+  { label: "Cite", href: "#citation" },
   { label: "Code", href: "https://github.com/roxqtang/EgoEverything" }
 ];
 
@@ -36,7 +39,7 @@ export const sectionIndex = [
 ];
 
 export const primaryLinks = [
-  { label: "Paper", href: "#paper", icon: FileText },
+  { label: "Paper", href: paperHref, icon: FileText },
   { label: "Dataset", href: "#dataset", icon: Database },
   { label: "Code", href: "https://github.com/roxqtang/EgoEverything", icon: Github },
   { label: "Leaderboard", href: "#leaderboard", icon: Trophy }
@@ -75,10 +78,8 @@ export const stats = [
   }
 ];
 
-const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
-
 export const paperAssets = {
-  pdf: assetPath("/paper-assets/ECCV_2026_EgoEverything.pdf"),
+  pdf: paperHref,
   overview: assetPath("/paper-assets/overview-figure.png"),
   pipeline: assetPath("/paper-assets/pipeline-figure.png"),
   mcq: assetPath("/paper-assets/mcq-example.png"),
@@ -190,7 +191,7 @@ export const failureFactors = [
 ];
 
 export const footerLinks = [
-  { label: "Paper", href: "#paper", icon: BookOpen },
+  { label: "Paper", href: paperHref, icon: BookOpen },
   { label: "Code", href: "https://github.com/roxqtang/EgoEverything", icon: Code2 },
   { label: "Dataset", href: "#dataset", icon: Database },
   { label: "Contact", href: "mailto:egoeverything@example.edu", icon: Mail }

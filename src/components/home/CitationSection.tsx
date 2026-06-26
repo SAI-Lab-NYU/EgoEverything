@@ -30,7 +30,7 @@ export function CitationSection() {
           <div className="mt-8 grid grid-cols-2 gap-2 sm:max-w-lg">
             {footerLinks.map((link) => {
               const Icon = link.icon;
-              const isExternal = link.href.startsWith("http");
+              const isExternal = !link.href.startsWith("#");
 
               return (
                 <a
