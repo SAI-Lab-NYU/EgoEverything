@@ -20,3 +20,6 @@ pnpm-debug.log*
 # OS files
 .DS_Store
 Thumbs.db
+
+processed_egoeverything*
+EgoEverything_VQA.json
