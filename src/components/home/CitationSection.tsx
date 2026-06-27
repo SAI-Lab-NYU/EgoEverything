@@ -1,5 +1,9 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
 import { Copy, ExternalLink } from "lucide-react";
-import { footerLinks } from "@/lib/content";
+import { footerLinks, paperAssets } from "@/lib/content";
 
 const citation = `@misc{tang2026egoeverythingbenchmarkhumanbehavior,
   title         = {EgoEverything: A Benchmark for Human Behavior Inspired Long Context Egocentric Video Understanding in AR Environment},
@@ -12,6 +16,14 @@ const citation = `@misc{tang2026egoeverythingbenchmarkhumanbehavior,
 }`;
 
 export function CitationSection() {
+  const [copied, setCopied] = useState(false);
+
+  const copyCitation = async () => {
+    await navigator.clipboard.writeText(citation);
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1500);
+  };
+
   return (
     <section
       id="citation"
@@ -33,18 +45,28 @@ export function CitationSection() {
             {footerLinks.map((link) => {
               const Icon = link.icon;
               const isExternal = !link.href.startsWith("#");
+              const isHuggingFace = link.href.includes("huggingface.co");
 
               return (
                 <a
                   key={link.label}
-                  id={link.label === "Code" ? "code" : undefined}
                   href={link.href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noreferrer" : undefined}
                   className="flex items-center justify-between border border-ink/15 bg-paper px-3 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition hover:border-ink hover:bg-ink hover:text-paper"
                 >
                   <span className="flex items-center gap-2">
-                    <Icon aria-hidden="true" size={15} strokeWidth={1.7} />
+                    {isHuggingFace ? (
+                      <Image
+                        src={paperAssets.huggingFaceIcon}
+                        alt=""
+                        width={15}
+                        height={15}
+                        className="size-[15px] shrink-0"
+                      />
+                    ) : (
+                      <Icon aria-hidden="true" size={15} strokeWidth={1.7} />
+                    )}
                     {link.label}
                   </span>
                   <ExternalLink aria-hidden="true" size={14} strokeWidth={1.7} />
@@ -59,10 +81,14 @@ export function CitationSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-paper/60">
               BibTeX
             </p>
-            <span className="inline-flex items-center gap-2 border border-paper/20 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-paper/70">
+            <button
+              type="button"
+              onClick={copyCitation}
+              className="inline-flex items-center gap-2 border border-paper/20 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-paper/70 transition hover:border-paper/60 hover:text-paper"
+            >
               <Copy aria-hidden="true" size={14} strokeWidth={1.7} />
-              arXiv
-            </span>
+              {copied ? "Copied" : "Copy"}
+            </button>
           </div>
           <pre className="overflow-x-auto whitespace-pre-wrap break-words font-mono text-sm leading-7 text-paper/82">
             {citation}
@@ -72,5 +98,4 @@ export function CitationSection() {
     </section>
   );
 }
-
 

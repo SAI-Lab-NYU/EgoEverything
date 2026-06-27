@@ -2,12 +2,10 @@ import {
   BarChart3,
   BookOpen,
   Boxes,
-  Code2,
   Database,
   Eye,
   FileText,
   Github,
-  Mail,
   Map,
   Target,
   Timer,
@@ -15,15 +13,15 @@ import {
 } from "lucide-react";
 
 const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
-export const paperHref = assetPath("/paper-assets/ECCV_2026_EgoEverything.pdf");
+const pdfHref = assetPath("/paper-assets/ECCV_2026_EgoEverything.pdf");
+export const paperHref = "https://arxiv.org/abs/2604.08342";
 
 export const navItems = [
   { label: "EgoEverything", href: "#overview" },
   { label: "Dataset", href: "#dataset" },
   { label: "Examples", href: "#examples" },
   { label: "Leaderboard", href: "#leaderboard" },
-  { label: "Cite", href: "#citation" },
-  { label: "Code", href: "https://github.com/SAI-Lab-NYU/EgoEverything-Dataset" }
+  { label: "Cite", href: "#citation" }
 ];
 
 export const sectionIndex = [
@@ -76,7 +74,7 @@ export const stats = [
 ];
 
 export const paperAssets = {
-  pdf: paperHref,
+  pdf: pdfHref,
   overview: assetPath("/paper-assets/overview-figure.png"),
   pipeline: assetPath("/paper-assets/pipeline-figure.png"),
   pipelinePdf: assetPath("/paper-assets/Pipeline.pdf"),
@@ -191,7 +189,7 @@ export const failureFactors = [
 
 export const footerLinks = [
   { label: "Paper", href: paperHref, icon: BookOpen },
-  { label: "Code", href: "https://github.com/SAI-Lab-NYU/EgoEverything-Dataset", icon: Code2 },
-  { label: "Dataset", href: "https://huggingface.co/datasets/roxqtang/EgoEverything", icon: Database },
-  { label: "Contact", href: "mailto:egoeverything@example.edu", icon: Mail }
+  { label: "Github", href: "https://github.com/SAI-Lab-NYU/EgoEverything-Dataset", icon: Github },
+  { label: "Huggingface", href: "https://huggingface.co/datasets/roxqtang/EgoEverything", icon: Database },
+  { label: "PDF", href: paperAssets.pdf, icon: FileText }
 ];

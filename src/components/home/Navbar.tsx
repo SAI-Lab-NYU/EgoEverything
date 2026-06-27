@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
-import { navItems, paperHref } from "@/lib/content";
+import { navItems, paperAssets } from "@/lib/content";
 
 export function Navbar() {
   const internalItems = useMemo(
@@ -82,12 +82,12 @@ export function Navbar() {
         </div>
 
         <a
-          href={paperHref}
+          href={paperAssets.pdf}
           target="_blank"
           rel="noreferrer"
           className="inline-flex h-10 items-center gap-2 border border-ink bg-ink px-4 text-xs font-semibold uppercase tracking-[0.13em] text-paper transition hover:bg-transparent hover:text-ink"
         >
-          View Paper
+          View PDF
           <ArrowUpRight aria-hidden="true" size={15} strokeWidth={1.8} />
         </a>
       </nav>
