@@ -27,33 +27,40 @@ export function Hero() {
 
             <h1
               id="hero-title"
-              className="mt-5 font-display text-[clamp(3.05rem,14vw,3.3rem)] font-black uppercase leading-[0.82] text-ink sm:text-[clamp(3.9rem,7vw,7.25rem)]"
+              className="mt-5 font-display text-[clamp(3.05rem,14vw,3.3rem)] font-black uppercase leading-[0.82] text-ink sm:text-[clamp(3.9rem,7.25vw,7.55rem)]"
             >
               Ego
               <br />
               Everything
             </h1>
 
-            <div className="mt-7 grid max-w-[44rem] gap-5 border-y border-ink/15 py-6 md:grid-cols-[1.08fr_0.72fr]">
+            <div className="mt-7 grid w-full gap-5 border-y border-ink/15 py-6 pl-2 md:grid-cols-[1.08fr_0.72fr]">
               <p className="text-xl leading-snug text-ink [text-wrap:balance] sm:text-2xl">
                 A Benchmark for Human Behavior–Inspired Long-Context
                 Egocentric Video Understanding in AR Environment
               </p>
               <p className="text-sm leading-6 text-muted">
-                Grounded in gaze traces, long-context egocentric video, and
-                carefully reviewed multiple-choice QA for evaluating practical
-                AR assistants.
+                Grounded in gaze traces, long-context egocentric video, and carefully
+                <br />
+                 reviewed multiple-choice QA for
+                <br />
+                evaluating practical AR assistants.
               </p>
             </div>
 
-            <div className="mt-6 max-w-[44rem] text-center text-sm font-semibold uppercase leading-relaxed tracking-[0.2em]">
-              <p className="text-base text-ink sm:text-lg">
-                Qiance Tang<sup>1†</sup>, Ziqi Wang<sup>1†</sup>, Jieyu Lin
-                <sup>2</sup>, Ziyun Li<sup>2</sup>,
-                <br />
-                Barbara De Salvo<sup>2</sup>, and Sai Qian Zhang
-                <sup>1‡</sup>
-              </p>
+            <div className="mt-6 w-full pl-2 text-center text-sm font-semibold uppercase leading-relaxed tracking-[0.2em]">
+              <div className="text-base text-ink sm:text-lg">
+                <div className="sm:flex sm:justify-between sm:gap-4">
+                  <span>Qiance Tang<sup>1†</sup>,</span>
+                  <span>Ziqi Wang<sup>1†</sup>,</span>
+                  <span>Jieyu Lin<sup>2</sup>,</span>
+                  <span>Ziyun Li<sup>2</sup>,</span>
+                </div>
+                <div className="mt-1">
+                  Barbara De Salvo<sup>2</sup>, and Sai Qian Zhang
+                  <sup>1‡</sup>
+                </div>
+              </div>
               <p className="mt-3 text-ink/70">
                 <sup>1</sup>New York University&nbsp;&nbsp;&nbsp;
                 <sup>2</sup>Meta Reality Labs

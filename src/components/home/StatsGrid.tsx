@@ -1,4 +1,5 @@
 import {
+  ArrowUpRight,
   CircleCheckBig,
   Clock,
   Crosshair,
@@ -10,9 +11,9 @@ import {
   ClipboardCheck,
   type LucideIcon
 } from "lucide-react";
+import Image from "next/image";
 
-import { stats } from "@/lib/content";
-import { SectionHeader } from "@/components/home/SectionHeader";
+import { paperAssets, stats } from "@/lib/content";
 
 const questionDistribution = [
   { label: "Temporal-Spatial", value: 23.0 },
@@ -76,15 +77,36 @@ const questionCategories: {
   }
 ];
 
+const objectCoverageLegend = [
+  { label: "Temporal-Spatial", color: "#96a8c2" },
+  { label: "Spatial-Spatial", color: "#6b85b0" },
+  { label: "Appearance", color: "#96c44c" },
+  { label: "Item Presence", color: "#5aac95" },
+  { label: "State Verify", color: "#d381ab" },
+  { label: "Event Verify", color: "#e68155" },
+  { label: "Direct Location", color: "#7b95b8" },
+  { label: "Others", color: "#f5c928" }
+];
+
 export function StatsGrid() {
   return (
     <section id="dataset" className="bg-paper px-4 pb-0 pt-16 sm:px-6 lg:px-8 lg:pt-24">
       <div className="mx-auto max-w-[1500px]">
-        <SectionHeader
-          eyebrow="02 / Dataset"
-          title="EgoEverything Introduction"
-          description="EgoEverything is a benchmark for long-context egocentric video understanding in AR environments. It leverages human attention signals abstracted from gaze data to generate natural multiple-choice questions, covering over 5,000 QA pairs across more than 100 hours of video."
-        />
+        <div className="border-t border-ink/15 pt-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+            02 / Dataset
+          </p>
+          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">
+            INTRODUCE EGOEVERYTHING
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
+            EgoEverything is a benchmark for long-context egocentric video
+            understanding in AR environments. It leverages human attention
+            signals abstracted from gaze data to generate natural
+            multiple-choice questions, covering over 5,000 QA pairs across more
+            than 100 hours of video.
+          </p>
+        </div>
 
         <div className="mt-10 grid border-l border-t border-ink/15 sm:grid-cols-2 lg:grid-cols-3">
           {stats.map((stat) => (
@@ -109,8 +131,8 @@ export function StatsGrid() {
           ))}
         </div>
 
-        <div className="border-x border-b border-ink/15 bg-paper p-5 lg:p-7">
-          <h3 className="font-display text-3xl font-black uppercase leading-none text-ink sm:text-4xl">
+        <div className="mt-10 lg:grid lg:grid-cols-[minmax(0,0.99fr)_minmax(0,0.88fr)]">
+          <h3 className="font-display text-3xl font-black uppercase leading-none text-ink sm:text-4xl lg:col-span-2">
             Why <span className="text-muted">EgoEverything?</span>
           </h3>
           <p className="mt-4 max-w-4xl text-base leading-7 text-muted">
@@ -122,7 +144,7 @@ export function StatsGrid() {
           </p>
         </div>
 
-        <div className="mt-12 grid border border-ink/15 bg-paper lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mt-12 grid border border-ink/15 bg-paper lg:grid-cols-[minmax(0,0.99fr)_minmax(0,0.88fr)]">
           <div className="border-b border-ink/15 p-5 lg:border-b-0 lg:border-r lg:p-7">
             <div className="mb-8 flex items-end justify-between gap-4">
               <div>
@@ -161,41 +183,87 @@ export function StatsGrid() {
           <div className="flex flex-col justify-between p-5 lg:p-7">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-                Question coverage
+                Target object coverage
               </p>
               <h3 className="mt-2 max-w-xl font-display text-3xl font-black uppercase leading-none text-ink sm:text-4xl">
-                Eight categories for AR memory.
+                What the questions are grounded in
+              </h3>
+              <div className="mt-5 grid grid-cols-3 gap-x-3 gap-y-2">
+                {objectCoverageLegend.map((item) => (
+                  <div
+                    key={item.label}
+                    className="flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.08em] text-ink"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="size-2.5 shrink-0"
+                      style={{ backgroundColor: item.color }}
+                    />
+                    {item.label}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative mt-4 overflow-hidden border border-ink/10 bg-[#f6f4ef]">
+              <a
+                href={paperAssets.objectDistributionSvg}
+                target="_blank"
+                rel="noreferrer"
+                className="absolute right-4 top-4 z-10 inline-flex items-center gap-1 border border-ink/15 bg-paper/90 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:border-ink hover:bg-ink hover:text-paper"
+              >
+                Full size
+                <ArrowUpRight aria-hidden="true" size={13} strokeWidth={1.8} />
+              </a>
+              <Image
+                src={paperAssets.objectDistributionSvg}
+                alt="Stacked bar chart of EgoEverything target object categories by question type"
+                width={1180}
+                height={620}
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-4 border border-ink/15 bg-paper p-5 lg:p-7">
+          <div className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+                Question coverage
+              </p>
+              <h3 className="mt-2 font-display text-3xl font-black uppercase leading-none text-ink sm:text-4xl">
+                8 categories for AR memory
               </h3>
             </div>
-
-            <div className="mt-8 grid border-l border-t border-ink/15 sm:grid-cols-2">
-              {questionCategories.map(({ label, detail, icon: Icon }) => (
-                <article
-                  key={label}
-                  className="flex items-center gap-4 border-b border-r border-ink/15 p-4"
-                >
-                  <span className="flex size-10 shrink-0 items-center justify-center border border-ink/20 text-ink">
-                    <Icon aria-hidden className="size-5" strokeWidth={1.8} />
-                  </span>
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
-                      {label}
-                    </p>
-                    <p className="mt-2 text-sm leading-6 text-muted">
-                      {detail}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-
             <a
               href="#examples"
-              className="mt-5 inline-flex w-fit items-center gap-3 border border-ink/15 px-4 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-ink transition hover:border-ink hover:bg-ink hover:text-paper"
+              className="inline-flex w-fit items-center gap-3 border border-ink/15 px-4 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-ink transition hover:border-ink hover:bg-ink hover:text-paper"
             >
               <Eye aria-hidden className="size-4" strokeWidth={1.8} />
               See examples
             </a>
+          </div>
+
+          <div className="grid border-l border-t border-ink/15 sm:grid-cols-2 lg:grid-cols-4">
+            {questionCategories.map(({ label, detail, icon: Icon }) => (
+              <article
+                key={label}
+                className="flex items-center gap-4 border-b border-r border-ink/15 p-4"
+              >
+                <span className="flex size-10 shrink-0 items-center justify-center border border-ink/20 text-ink">
+                  <Icon aria-hidden className="size-5" strokeWidth={1.8} />
+                </span>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+                    {label}
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-muted">
+                    {detail}
+                  </p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </div>
