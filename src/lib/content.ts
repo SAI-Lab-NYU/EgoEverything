@@ -82,6 +82,7 @@ export const paperAssets = {
   pdf: paperHref,
   overview: assetPath("/paper-assets/overview-figure.png"),
   pipeline: assetPath("/paper-assets/pipeline-figure.png"),
+  metaIcon: assetPath("/paper-assets/meta-icon.png"),
   mcq: assetPath("/paper-assets/mcq-example.png"),
   questionDistribution: assetPath("/paper-assets/question-distribution.png"),
   objectDistribution: assetPath("/paper-assets/object-distribution.png"),
@@ -196,6 +197,5 @@ export const footerLinks = [
   { label: "Dataset", href: "https://huggingface.co/datasets/roxqtang/EgoEverything", icon: Database },
   { label: "Contact", href: "mailto:egoeverything@example.edu", icon: Mail }
 ];
-
 
 
