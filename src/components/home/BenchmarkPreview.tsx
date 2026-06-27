@@ -4,16 +4,18 @@ export function BenchmarkPreview() {
   return (
     <section className="bg-paper px-4 pb-16 pt-0 sm:px-6 lg:px-8 lg:pb-24">
       <div className="mx-auto max-w-[1500px]">
-        <div className="pt-5">
-          <h2 className="max-w-3xl font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">
-            Current VLMs remain well below human performance.
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
-            The homepage preview surfaces the headline gap: strong models
-            improve over text-only baselines, but still struggle with
-            long-horizon visual memory, small details, and
-            attention-conditioned evidence.
-          </p>
+        <div className="pt-5 lg:grid lg:grid-cols-[minmax(0,0.99fr)_minmax(0,0.88fr)]">
+          <div>
+            <h2 className="max-w-3xl font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">
+              Current VLMs remain well below human performance
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
+              The homepage preview surfaces the headline gap: strong models
+              improve over text-only baselines, but still struggle with
+              long-horizon visual memory, small details, and
+              attention-conditioned evidence.
+            </p>
+          </div>
         </div>
 
         <div id="leaderboard" className="mt-10 grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">

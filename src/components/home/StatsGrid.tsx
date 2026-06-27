@@ -92,20 +92,22 @@ export function StatsGrid() {
   return (
     <section id="dataset" className="bg-paper px-4 pb-0 pt-16 sm:px-6 lg:px-8 lg:pt-24">
       <div className="mx-auto max-w-[1500px]">
-        <div className="border-t border-ink/15 pt-5">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
-            02 / Dataset
-          </p>
-          <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">
-            INTRODUCE EGOEVERYTHING
-          </h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
-            EgoEverything is a benchmark for long-context egocentric video
-            understanding in AR environments. It leverages human attention
-            signals abstracted from gaze data to generate natural
-            multiple-choice questions, covering over 5,000 QA pairs across more
-            than 100 hours of video.
-          </p>
+        <div className="border-t border-ink/15 pt-5 lg:grid lg:grid-cols-[minmax(0,0.95fr)_minmax(480px,0.88fr)]">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-muted">
+              02 / Dataset
+            </p>
+            <h2 className="mt-5 font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">
+              INTRODUCE EGOEVERYTHING
+            </h2>
+            <p className="mt-4 text-base leading-7 text-muted">
+              EgoEverything is a benchmark for long-context egocentric video
+              understanding in AR environments. It leverages human attention
+              signals abstracted from gaze data to generate natural
+              multiple-choice questions, covering over 5,000 QA pairs across
+              more than 100 hours of video.
+            </p>
+          </div>
         </div>
 
         <div className="mt-10 grid border-l border-t border-ink/15 sm:grid-cols-2 lg:grid-cols-3">
@@ -131,17 +133,19 @@ export function StatsGrid() {
           ))}
         </div>
 
-        <div className="mt-10 lg:grid lg:grid-cols-[minmax(0,0.99fr)_minmax(0,0.88fr)]">
-          <h3 className="font-display text-3xl font-black uppercase leading-none text-ink sm:text-4xl lg:col-span-2">
-            Why <span className="text-muted">EgoEverything?</span>
-          </h3>
-          <p className="mt-4 max-w-4xl text-base leading-7 text-muted">
-            Existing long-context egocentric benchmarks often ask generic,
-            template-like video questions and overlook how AR users naturally
-            query what they attended to during interaction. EgoEverything fills
-            this gap with gaze-grounded, human-reviewed MCQs that better reflect
-            real AR memory and reasoning needs.
-          </p>
+        <div className="mt-10 lg:grid lg:grid-cols-[minmax(0,0.95fr)_minmax(480px,0.88fr)]">
+          <div>
+            <h3 className="font-display text-3xl font-black uppercase leading-none text-ink sm:text-4xl">
+              Why <span className="text-muted">EgoEverything?</span>
+            </h3>
+            <p className="mt-4 text-base leading-7 text-muted">
+              Existing long-context egocentric benchmarks often ask generic,
+              template-like video questions and overlook how AR users naturally
+              query what they attended to during interaction. EgoEverything
+              fills this gap with gaze-grounded, human-reviewed MCQs that better
+              reflect real AR memory and reasoning needs.
+            </p>
+          </div>
         </div>
 
         <div className="mt-12 grid border border-ink/15 bg-paper lg:grid-cols-[minmax(0,0.99fr)_minmax(0,0.88fr)]">

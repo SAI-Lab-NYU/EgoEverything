@@ -23,7 +23,7 @@ export function CitationSection() {
             06 / Citation
           </p>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">
-            Cite the benchmark.
+            Cite the benchmark
           </h2>
           <p className="mt-4 max-w-md text-base leading-7 text-muted">
             arXiv BibTeX for the EgoEverything benchmark preprint.

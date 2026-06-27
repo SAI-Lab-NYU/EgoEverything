@@ -29,6 +29,7 @@ export const navItems = [
 export const sectionIndex = [
   { number: "01", label: "EgoEverything", href: "#overview" },
   { number: "02", label: "Dataset", href: "#dataset" },
+  { number: "03", label: "Build", href: "#dataset-build" },
   { number: "04", label: "Examples", href: "#examples" },
   { number: "05", label: "Results", href: "#leaderboard" },
   { number: "06", label: "Citation", href: "#citation" }
@@ -78,6 +79,7 @@ export const paperAssets = {
   pdf: paperHref,
   overview: assetPath("/paper-assets/overview-figure.png"),
   pipeline: assetPath("/paper-assets/pipeline-figure.png"),
+  pipelinePdf: assetPath("/paper-assets/Pipeline.pdf"),
   huggingFaceIcon: assetPath("/paper-assets/huggingface.svg"),
   metaIcon: assetPath("/paper-assets/meta-icon.png"),
   mcq: assetPath("/paper-assets/mcq-example.png"),
@@ -181,11 +183,6 @@ export const failureFactors = [
     title: "Smaller objects",
     body: "Fine-grained, low-area visual evidence remains fragile even when the object is semantically simple.",
     marker: "scale"
-  },
-  {
-    title: "Attention context",
-    body: "Gaze traces add behavioral signal that helps separate seen, noticed, and merely present evidence.",
-    marker: "trace"
   }
 ];
 

@@ -1,5 +1,6 @@
 import { BenchmarkPreview } from "@/components/home/BenchmarkPreview";
 import { CitationSection } from "@/components/home/CitationSection";
+import { DatasetBuildPreview } from "@/components/home/DatasetBuildPreview";
 import { ExamplesPreview } from "@/components/home/ExamplesPreview";
 import { FailureAnalysisPreview } from "@/components/home/FailureAnalysisPreview";
 import { Footer } from "@/components/home/Footer";
@@ -15,8 +16,9 @@ export default function Home() {
       <PaperPreviewDock />
       <Hero />
       <StatsGrid />
-      <BenchmarkPreview />
+      <DatasetBuildPreview />
       <ExamplesPreview />
+      <BenchmarkPreview />
       <FailureAnalysisPreview />
       <CitationSection />
       <Footer />

@@ -7,7 +7,7 @@ export function ExamplesPreview() {
       <div className="mx-auto max-w-[1500px]">
         <SectionHeader
           eyebrow="04 / Examples"
-          title="Questions look like lived AR memory, not static image QA."
+          title="Questions look like lived AR memory, not static image QA"
           description="Example previews combine category labels, temporal cues, and compact visual traces so researchers can quickly understand the benchmark's evaluation surface."
         />
 
