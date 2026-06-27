@@ -1,18 +1,20 @@
 import { benchmarkResults } from "@/lib/content";
-import { SectionHeader } from "@/components/home/SectionHeader";
 
 export function BenchmarkPreview() {
   return (
-    <section
-      id="benchmark"
-      className="border-y border-ink/15 bg-[#eeece5] px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
-    >
+    <section className="bg-paper px-4 pb-16 pt-0 sm:px-6 lg:px-8 lg:pb-24">
       <div className="mx-auto max-w-[1500px]">
-        <SectionHeader
-          eyebrow="03 / Benchmark"
-          title="Current VLMs remain well below human performance."
-          description="The homepage preview surfaces the headline gap: strong models improve over text-only baselines, but still struggle with long-horizon visual memory, small details, and attention-conditioned evidence."
-        />
+        <div className="pt-5">
+          <h2 className="max-w-3xl font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">
+            Current VLMs remain well below human performance.
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-7 text-muted">
+            The homepage preview surfaces the headline gap: strong models
+            improve over text-only baselines, but still struggle with
+            long-horizon visual memory, small details, and
+            attention-conditioned evidence.
+          </p>
+        </div>
 
         <div id="leaderboard" className="mt-10 grid gap-5 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="border border-ink bg-ink p-5 text-paper sm:p-7">

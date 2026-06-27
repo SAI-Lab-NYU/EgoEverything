@@ -20,7 +20,6 @@ export const paperHref = assetPath("/paper-assets/ECCV_2026_EgoEverything.pdf");
 export const navItems = [
   { label: "EgoEverything", href: "#overview" },
   { label: "Dataset", href: "#dataset" },
-  { label: "Benchmark", href: "#benchmark" },
   { label: "Examples", href: "#examples" },
   { label: "Leaderboard", href: "#leaderboard" },
   { label: "Cite", href: "#citation" },
@@ -30,7 +29,6 @@ export const navItems = [
 export const sectionIndex = [
   { number: "01", label: "EgoEverything", href: "#overview" },
   { number: "02", label: "Dataset", href: "#dataset" },
-  { number: "03", label: "Benchmark", href: "#benchmark" },
   { number: "04", label: "Examples", href: "#examples" },
   { number: "05", label: "Results", href: "#leaderboard" },
   { number: "06", label: "Citation", href: "#citation" }
