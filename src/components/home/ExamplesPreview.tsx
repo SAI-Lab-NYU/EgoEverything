@@ -3,17 +3,6 @@ import { ArrowUpRight } from "lucide-react";
 import { SectionHeader } from "@/components/home/SectionHeader";
 import { paperAssets } from "@/lib/content";
 
-const mcqPreviews = [
-  {
-    label: "MCQ example 01",
-    src: paperAssets.mcqExample1Pdf
-  },
-  {
-    label: "MCQ example 02",
-    src: paperAssets.mcqExample2Pdf
-  }
-];
-
 const exampleNotes = [
   {
     label: "Question type",
@@ -39,42 +28,28 @@ export function ExamplesPreview() {
           description="EgoEverything examples show how a gaze-sampled target object becomes a natural multiple-choice question with supporting frames, colored evidence, and model-versus-ground-truth labels."
         />
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(300px,0.42fr)]">
+        <div className="mt-10 grid gap-4 lg:grid-cols-[minmax(0,0.99fr)_minmax(0,0.88fr)]">
           <article className="border border-ink/15 bg-[#f9f7f1] p-3">
             <div className="mb-3 flex flex-wrap items-center justify-between gap-3 border-b border-ink/15 pb-3">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Figure 4 / MCQ evidence examples
               </p>
-              <div className="flex flex-wrap gap-3">
-                {mcqPreviews.map((preview) => (
-                  <a
-                    key={preview.label}
-                    href={preview.src}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-ink hover:text-warm"
-                  >
-                    Open PDF
-                    <ArrowUpRight aria-hidden="true" size={13} strokeWidth={1.8} />
-                  </a>
-                ))}
-              </div>
+              <a
+                href={paperAssets.mcqExampleCombinedPdf}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-ink hover:text-warm"
+              >
+                Open PDF
+                <ArrowUpRight aria-hidden="true" size={13} strokeWidth={1.8} />
+              </a>
             </div>
 
-            <div className="grid gap-3">
-              {mcqPreviews.map((preview) => (
-                <div key={preview.label}>
-                  <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
-                    {preview.label}
-                  </p>
-                  <iframe
-                    title={preview.label}
-                    src={`${preview.src}#toolbar=0&navpanes=0&scrollbar=0`}
-                    className="h-[380px] w-full border border-ink/10 bg-white sm:h-[500px] xl:h-[560px]"
-                  />
-                </div>
-              ))}
-            </div>
+            <iframe
+              title="Combined MCQ examples"
+              src={`${paperAssets.mcqExampleCombinedPdf}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
+              className="aspect-[1.11/1] h-auto w-full border border-ink/10 bg-white"
+            />
           </article>
 
           <div className="grid gap-4">

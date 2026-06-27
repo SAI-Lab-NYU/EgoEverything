@@ -88,6 +88,7 @@ export const paperAssets = {
   objectDistributionSvg: assetPath("/paper-assets/object-category-distribution.svg"),
   mcqExample1Pdf: assetPath("/paper-assets/mcq-example_1_new.pdf"),
   mcqExample2Pdf: assetPath("/paper-assets/mcq-example_2_new.pdf"),
+  mcqExampleCombinedPdf: assetPath("/paper-assets/mcq-example_combined.pdf"),
   resultsTable: assetPath("/paper-assets/results-table.png")
 };
 
