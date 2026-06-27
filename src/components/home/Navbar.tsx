@@ -1,7 +1,42 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { navItems, paperHref } from "@/lib/content";
 
 export function Navbar() {
+  const internalItems = useMemo(
+    () => navItems.filter((item) => item.href.startsWith("#")),
+    []
+  );
+  const [activeHref, setActiveHref] = useState(internalItems[0]?.href ?? "");
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const current = internalItems
+        .map((item) => {
+          const section = document.querySelector(item.href);
+          return section
+            ? { href: item.href, top: section.getBoundingClientRect().top }
+            : null;
+        })
+        .filter((item): item is { href: string; top: number } => item !== null)
+        .reverse()
+        .find((item) => item.top <= 96);
+
+      setActiveHref(current?.href ?? internalItems[0]?.href ?? "");
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, [internalItems]);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-paper/88 backdrop-blur-xl">
       <nav
@@ -25,6 +60,7 @@ export function Navbar() {
         <div className="hidden items-center gap-1 lg:flex">
           {navItems.map((item) => {
             const isExternal = item.href.startsWith("http");
+            const isActive = activeHref === item.href;
 
             return (
               <a
@@ -32,9 +68,14 @@ export function Navbar() {
                 href={item.href}
                 target={isExternal ? "_blank" : undefined}
                 rel={isExternal ? "noreferrer" : undefined}
-                className="px-3 py-2 text-xs font-semibold uppercase tracking-[0.11em] text-muted transition hover:text-ink"
+                className={`relative px-3 py-2 text-xs font-semibold uppercase tracking-[0.11em] transition hover:text-ink ${
+                  isActive ? "text-ink" : "text-muted"
+                }`}
               >
                 {item.label}
+                {isActive ? (
+                  <span className="absolute inset-x-3 bottom-0 h-px bg-ink" />
+                ) : null}
               </a>
             );
           })}

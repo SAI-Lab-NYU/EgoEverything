@@ -18,9 +18,8 @@ const assetPath = (path: string) => `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}$
 export const paperHref = assetPath("/paper-assets/ECCV_2026_EgoEverything.pdf");
 
 export const navItems = [
-  { label: "Overview", href: "#overview" },
-  { label: "Figures", href: "#figures" },
-  { label: "Dataset", href: "https://huggingface.co/datasets/roxqtang/EgoEverything" },
+  { label: "EgoEverything", href: "#overview" },
+  { label: "Dataset", href: "#dataset" },
   { label: "Benchmark", href: "#benchmark" },
   { label: "Examples", href: "#examples" },
   { label: "Leaderboard", href: "#leaderboard" },
@@ -29,19 +28,18 @@ export const navItems = [
 ];
 
 export const sectionIndex = [
-  { number: "01", label: "Overview", href: "#overview" },
-  { number: "02", label: "Figures", href: "#figures" },
-  { number: "03", label: "Dataset", href: "#dataset" },
-  { number: "04", label: "Benchmark", href: "#benchmark" },
-  { number: "05", label: "Examples", href: "#examples" },
-  { number: "06", label: "Results", href: "#leaderboard" },
-  { number: "07", label: "Citation", href: "#citation" }
+  { number: "01", label: "EgoEverything", href: "#overview" },
+  { number: "02", label: "Dataset", href: "#dataset" },
+  { number: "03", label: "Benchmark", href: "#benchmark" },
+  { number: "04", label: "Examples", href: "#examples" },
+  { number: "05", label: "Results", href: "#leaderboard" },
+  { number: "06", label: "Citation", href: "#citation" }
 ];
 
 export const primaryLinks = [
   { label: "Paper", href: paperHref, icon: FileText },
-  { label: "Dataset", href: "https://huggingface.co/datasets/roxqtang/EgoEverything", icon: Database },
-  { label: "Code", href: "https://github.com/SAI-Lab-NYU/EgoEverything-Dataset", icon: Github },
+  { label: "Huggingface", href: "https://huggingface.co/datasets/roxqtang/EgoEverything", icon: Database },
+  { label: "Github", href: "https://github.com/SAI-Lab-NYU/EgoEverything-Dataset", icon: Github },
   { label: "Leaderboard", href: "#leaderboard", icon: Trophy }
 ];
 
@@ -82,6 +80,7 @@ export const paperAssets = {
   pdf: paperHref,
   overview: assetPath("/paper-assets/overview-figure.png"),
   pipeline: assetPath("/paper-assets/pipeline-figure.png"),
+  huggingFaceIcon: assetPath("/paper-assets/huggingface.svg"),
   metaIcon: assetPath("/paper-assets/meta-icon.png"),
   mcq: assetPath("/paper-assets/mcq-example.png"),
   questionDistribution: assetPath("/paper-assets/question-distribution.png"),
@@ -197,5 +196,3 @@ export const footerLinks = [
   { label: "Dataset", href: "https://huggingface.co/datasets/roxqtang/EgoEverything", icon: Database },
   { label: "Contact", href: "mailto:egoeverything@example.edu", icon: Mail }
 ];
-
-

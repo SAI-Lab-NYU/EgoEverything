@@ -34,8 +34,8 @@ export function Hero() {
               Everything
             </h1>
 
-            <div className="mt-7 grid max-w-3xl gap-5 border-y border-ink/15 py-6 md:grid-cols-[1fr_0.72fr]">
-              <p className="text-xl leading-snug text-ink sm:text-2xl">
+            <div className="mt-7 grid max-w-[44rem] gap-5 border-y border-ink/15 py-6 md:grid-cols-[1.08fr_0.72fr]">
+              <p className="text-xl leading-snug text-ink [text-wrap:balance] sm:text-2xl">
                 A Benchmark for Human Behavior–Inspired Long-Context
                 Egocentric Video Understanding in AR Environment
               </p>
@@ -46,7 +46,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="mt-6 max-w-3xl text-center text-sm font-semibold uppercase leading-relaxed tracking-[0.2em]">
+            <div className="mt-6 max-w-[44rem] text-center text-sm font-semibold uppercase leading-relaxed tracking-[0.2em]">
               <p className="text-base text-ink sm:text-lg">
                 Qiance Tang<sup>1†</sup>, Ziqi Wang<sup>1†</sup>, Jieyu Lin
                 <sup>2</sup>, Ziyun Li<sup>2</sup>,
@@ -59,13 +59,15 @@ export function Hero() {
                 <sup>2</sup>Meta Reality Labs
               </p>
               <p className="mt-1.5 text-xs text-muted sm:text-sm">
-                <sup>†</sup> Equal contribution.&nbsp;&nbsp;
-                <sup>‡</sup> Corresponding author.
+                <sup className="text-sm sm:text-base">†</sup> Equal
+                contribution.&nbsp;&nbsp;
+                <sup className="text-sm sm:text-base">‡</sup> Corresponding
+                author.
               </p>
             </div>
           </div>
 
-          <div className="mt-8 flex max-w-3xl justify-center">
+          <div className="mt-8 flex max-w-[44rem] justify-center">
             <div className="inline-flex items-center gap-2 border border-ink/12 bg-paper/80 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted">
               <span>In collaboration with</span>
               <Image
@@ -78,11 +80,12 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 max-w-[44rem]">
             <div className="grid grid-cols-1 gap-2 min-[460px]:grid-cols-2 sm:grid-cols-4">
               {primaryLinks.map((link) => {
                 const Icon = link.icon;
                 const isExternal = !link.href.startsWith("#");
+                const isDataset = link.href.includes("huggingface.co");
 
                 return (
                   <a
@@ -90,17 +93,32 @@ export function Hero() {
                     href={link.href}
                     target={isExternal ? "_blank" : undefined}
                     rel={isExternal ? "noreferrer" : undefined}
-                    className="group flex min-h-16 items-center justify-between border border-ink/18 bg-paper px-4 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ink transition hover:border-ink hover:bg-ink hover:text-paper"
+                    className="group relative flex min-h-16 min-w-0 items-center border border-ink/18 bg-paper px-4 py-3 text-xs font-semibold uppercase tracking-[0.08em] text-ink transition hover:border-ink hover:bg-ink hover:text-paper"
                   >
-                    <span className="flex items-center gap-2">
-                      <Icon aria-hidden="true" size={17} strokeWidth={1.7} />
+                    <span className="flex min-w-0 items-center gap-2 whitespace-nowrap">
+                      {isDataset ? (
+                        <Image
+                          src={paperAssets.huggingFaceIcon}
+                          alt=""
+                          width={17}
+                          height={17}
+                          className="h-[17px] w-[17px] shrink-0"
+                        />
+                      ) : (
+                        <Icon
+                          aria-hidden="true"
+                          size={17}
+                          strokeWidth={1.7}
+                          className="shrink-0"
+                        />
+                      )}
                       {link.label}
                     </span>
                     <ArrowDownRight
                       aria-hidden="true"
-                      size={16}
+                      size={14}
                       strokeWidth={1.7}
-                      className="transition group-hover:translate-x-0.5 group-hover:translate-y-0.5"
+                      className="absolute bottom-0.5 right-0.5 transition group-hover:translate-x-0.5 group-hover:translate-y-0.5"
                     />
                   </a>
                 );

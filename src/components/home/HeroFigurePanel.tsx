@@ -85,7 +85,7 @@ export function HeroFigurePanel() {
           ))}
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink via-ink/70 to-transparent p-4 pt-16 text-paper">
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-paper/60">
-              Long-context AR memory scenes
+              Long-context Egocentric Videos
             </p>
             <h2 className="mt-2 max-w-lg font-display text-2xl font-semibold leading-tight sm:text-4xl">
               Everyday egocentric video across people, places, and tasks.

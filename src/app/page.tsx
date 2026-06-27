@@ -7,7 +7,6 @@ import { Hero } from "@/components/home/Hero";
 import { Navbar } from "@/components/home/Navbar";
 import { PaperPreviewDock } from "@/components/home/PaperPreviewDock";
 import { StatsGrid } from "@/components/home/StatsGrid";
-import { VisualArchive } from "@/components/home/VisualArchive";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       <Navbar />
       <PaperPreviewDock />
       <Hero />
-      <VisualArchive />
       <StatsGrid />
       <BenchmarkPreview />
       <ExamplesPreview />
