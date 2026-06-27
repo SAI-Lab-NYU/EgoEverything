@@ -1,11 +1,14 @@
 import { Copy, ExternalLink } from "lucide-react";
 import { footerLinks } from "@/lib/content";
 
-const citation = `@inproceedings{egoeverything2026,
-  title     = {EgoEverything: A Benchmark for Human Behavior-Inspired Long-Context Egocentric Video Understanding in AR Environment},
-  author    = {Author Names},
-  booktitle = {European Conference on Computer Vision (ECCV)},
-  year      = {2026}
+const citation = `@misc{tang2026egoeverythingbenchmarkhumanbehavior,
+  title         = {EgoEverything: A Benchmark for Human Behavior Inspired Long Context Egocentric Video Understanding in AR Environment},
+  author        = {Qiance Tang and Ziqi Wang and Jieyu Lin and Ziyun Li and Barbara De Salvo and Sai Qian Zhang},
+  year          = {2026},
+  eprint        = {2604.08342},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2604.08342}
 }`;
 
 export function CitationSection() {
@@ -23,8 +26,7 @@ export function CitationSection() {
             Cite the benchmark.
           </h2>
           <p className="mt-4 max-w-md text-base leading-7 text-muted">
-            Placeholder BibTeX for the official EgoEverything website. Replace
-            author metadata and links when the camera-ready release is public.
+            arXiv BibTeX for the EgoEverything benchmark preprint.
           </p>
 
           <div className="mt-8 grid grid-cols-2 gap-2 sm:max-w-lg">
@@ -59,7 +61,7 @@ export function CitationSection() {
             </p>
             <span className="inline-flex items-center gap-2 border border-paper/20 px-3 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-paper/70">
               <Copy aria-hidden="true" size={14} strokeWidth={1.7} />
-              Placeholder
+              arXiv
             </span>
           </div>
           <pre className="overflow-x-auto whitespace-pre-wrap break-words font-mono text-sm leading-7 text-paper/82">
@@ -70,4 +72,5 @@ export function CitationSection() {
     </section>
   );
 }
+
 
