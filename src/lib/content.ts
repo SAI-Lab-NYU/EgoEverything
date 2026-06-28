@@ -89,6 +89,7 @@ export const paperAssets = {
   mcqExample1Pdf: assetPath("/paper-assets/mcq-example_1_new.pdf"),
   mcqExample2Pdf: assetPath("/paper-assets/mcq-example_2_new.pdf"),
   mcqExampleCombinedPdf: assetPath("/paper-assets/mcq-example_combined.pdf"),
+  mcqExampleCombinedPreview: assetPath("/paper-assets/mcq-example_combined-preview.jpg"),
   resultsTable: assetPath("/paper-assets/results-table.png")
 };
 

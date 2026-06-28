@@ -1,3 +1,7 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 import { ExampleBrowser } from "@/components/home/ExampleBrowser";
@@ -5,6 +9,9 @@ import { SectionHeader } from "@/components/home/SectionHeader";
 import { paperAssets } from "@/lib/content";
 
 export function ExamplesPreview() {
+  const [isPdfLoaded, setIsPdfLoaded] = useState(false);
+  const pdfViewerSrc = `${paperAssets.mcqExampleCombinedPdf}#toolbar=0&navpanes=0&scrollbar=0&view=Fit`;
+
   return (
     <section id="examples" className="bg-paper px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-[1500px]">
@@ -20,22 +27,52 @@ export function ExamplesPreview() {
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted">
                 Figure 4 / MCQ evidence examples
               </p>
-              <a
-                href={paperAssets.mcqExampleCombinedPdf}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-ink hover:text-warm"
-              >
-                Open PDF
-                <ArrowUpRight aria-hidden="true" size={13} strokeWidth={1.8} />
-              </a>
+              <div className="flex items-center gap-3">
+                {!isPdfLoaded && (
+                  <button
+                    type="button"
+                    onClick={() => setIsPdfLoaded(true)}
+                    className="text-[10px] font-semibold uppercase tracking-[0.14em] text-ink hover:text-warm"
+                  >
+                    Load PDF
+                  </button>
+                )}
+                <a
+                  href={paperAssets.mcqExampleCombinedPdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-ink hover:text-warm"
+                >
+                  Open PDF
+                  <ArrowUpRight aria-hidden="true" size={13} strokeWidth={1.8} />
+                </a>
+              </div>
             </div>
 
-            <iframe
-              title="Combined MCQ examples"
-              src={`${paperAssets.mcqExampleCombinedPdf}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
-              className="aspect-[1.11/1] h-auto w-full border border-ink/10 bg-white"
-            />
+            {isPdfLoaded ? (
+              <iframe
+                title="Combined MCQ examples"
+                src={pdfViewerSrc}
+                loading="lazy"
+                className="aspect-[1.11/1] h-auto w-full border border-ink/10 bg-white"
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setIsPdfLoaded(true)}
+                className="block aspect-[1.11/1] w-full overflow-hidden border border-ink/10 bg-white text-left"
+                aria-label="Load combined MCQ examples PDF"
+              >
+                <Image
+                  src={paperAssets.mcqExampleCombinedPreview}
+                  alt="Combined MCQ examples preview"
+                  width={1200}
+                  height={1082}
+                  className="h-full w-full object-contain"
+                  sizes="(min-width: 1024px) 52vw, 100vw"
+                />
+              </button>
+            )}
           </article>
 
           <ExampleBrowser />
