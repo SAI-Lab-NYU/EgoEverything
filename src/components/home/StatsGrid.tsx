@@ -136,7 +136,7 @@ export function StatsGrid() {
         <div className="mt-10 lg:grid lg:grid-cols-[minmax(0,0.95fr)_minmax(480px,0.88fr)]">
           <div>
             <h3 className="font-display text-3xl font-black uppercase leading-none text-ink sm:text-4xl">
-              Why <span className="text-muted">EgoEverything?</span>
+              Why <span className="text-muted">EgoEverything</span>
             </h3>
             <p className="mt-4 text-base leading-7 text-muted">
               Existing long-context egocentric benchmarks often ask generic,

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { ArrowUpRight, ClipboardCheck, Crosshair, Video } from "lucide-react";
 
 import { paperAssets } from "@/lib/content";
-import { SectionHeader } from "@/components/home/SectionHeader";
 
 const buildSteps = [
   {
@@ -24,13 +23,19 @@ const buildSteps = [
 
 export function DatasetBuildPreview() {
   return (
-    <section id="dataset-build" className="bg-paper px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <section id="dataset-build" className="bg-paper px-4 pb-16 pt-12 sm:px-6 lg:px-8 lg:pb-20 lg:pt-14">
       <div className="mx-auto max-w-[1500px]">
-        <SectionHeader
-          eyebrow="03 / How the dataset is built"
-          title="From attention traces to reviewed AR memory questions"
-          description="EgoEverything turns long first-person video and gaze into compact, reviewed MCQs through a gaze-oriented target sampling pipeline."
-        />
+        <div className="lg:grid lg:grid-cols-[minmax(0,0.95fr)_minmax(480px,0.88fr)]">
+          <div>
+            <h3 className="font-display text-3xl font-black uppercase leading-none text-ink sm:text-4xl">
+              How <span className="text-muted">EgoEverything is built</span>
+            </h3>
+            <p className="mt-4 text-base leading-7 text-muted">
+              EgoEverything turns long first-person video and gaze into compact,
+              reviewed MCQs through a gaze-oriented target sampling pipeline.
+            </p>
+          </div>
+        </div>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-[1fr_280px]">
           <div className="grid border-l border-t border-ink/15 md:grid-cols-3">
