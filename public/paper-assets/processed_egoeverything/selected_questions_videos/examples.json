@@ -1,0 +1,258 @@
+[
+  {
+    "index": 1,
+    "category": "Item Presence",
+    "category_slug": "item_presence",
+    "question": "Was there a red and white chevron blanket on the sofa in the living room?",
+    "answer": "Yes, it was on the armrest of the sofa.",
+    "options": [
+      "Yes, it was on the armrest of the sofa.",
+      "No, there was a plain red blanket on the sofa.",
+      "No, an orange and blue striped blanket was on the sofa.",
+      "Yes, but it was on the floor next to the sofa.",
+      "Yes, but it was folded neatly on the cushion of the sofa."
+    ],
+    "correct_answer": 0,
+    "video_name": "loc3_script3_seq2_rec1",
+    "dataset": "aria_everyday",
+    "source_path": "/mnt/hdd/incSeg_data/aria_everyday/loc3_script3_seq2_rec1/AriaEverydayActivities_1.0.0_loc3_script3_seq2_rec1_preview_rgb.mp4",
+    "timestamp_sec": 88.9,
+    "clip_start_sec": 58.9,
+    "clip_duration_sec": 60.0,
+    "clip_file": "01_item_presence_loc3_script3_seq2_rec1.mp4",
+    "sample_image_path": "/keyframes/6Lj5SRem06_loc3_script3_seq2_rec1_striped_blanket.jpg",
+    "keyframes": [
+      {
+        "image_path": "/keyframes/6Lj5SRem06_loc3_script3_seq2_rec1_striped_blanket.jpg",
+        "timestamp": 88.9,
+        "object_name": "striped_blanket",
+        "bbox": "0,763,564,1334"
+      }
+    ],
+    "rationale": "Asks whether a specific item appears in a specified place."
+  },
+  {
+    "index": 2,
+    "category": "Appearance",
+    "category_slug": "appearance",
+    "question": "What color was the balloon in the living room when someone entered?",
+    "answer": "Purple",
+    "options": [
+      "Blue",
+      "Purple",
+      "Green",
+      "Red",
+      "Yellow"
+    ],
+    "correct_answer": 1,
+    "video_name": "loc1_script3_seq1_rec1",
+    "dataset": "aria_everyday",
+    "source_path": "/mnt/hdd/incSeg_data/aria_everyday/loc1_script3_seq1_rec1/AriaEverydayActivities_1.0.0_loc1_script3_seq1_rec1_preview_rgb.mp4",
+    "timestamp_sec": 12.3,
+    "clip_start_sec": 0.0,
+    "clip_duration_sec": 60.0,
+    "clip_file": "02_appearance_loc1_script3_seq1_rec1.mp4",
+    "sample_image_path": "/keyframes/u0KjRAx5Kj_loc1_script3_seq1_rec1_balloon.jpg",
+    "keyframes": [
+      {
+        "image_path": "/keyframes/u0KjRAx5Kj_loc1_script3_seq1_rec1_balloon.jpg",
+        "timestamp": 12.3,
+        "object_name": "balloon",
+        "bbox": "964,667,1034,743"
+      }
+    ],
+    "rationale": "Asks for a visual attribute of an item."
+  },
+  {
+    "index": 3,
+    "category": "Event Verification",
+    "category_slug": "event_verification",
+    "question": "Did I put the brown fabric in while doing the laundry?",
+    "answer": "Yes, you picked it up with a pile of clothes from on top of the washing machine and then placed them inside.",
+    "options": [
+      "Yes, you picked it up with a pile of clothes from on top of the washing machine and then placed them inside.",
+      "No, the brown fabric remained on the washing machine with other clothes.",
+      "Yes, you placed the brown fabric into the top loader of the washing machine separately.",
+      "No, you only put in white clothes, and the brown fabric was not among them.",
+      "Yes, you put in the brown fabric first before setting up the machine."
+    ],
+    "correct_answer": 0,
+    "video_name": "loc3_script5_seq2_rec1",
+    "dataset": "aria_everyday",
+    "source_path": "/mnt/hdd/incSeg_data/aria_everyday/loc3_script5_seq2_rec1/AriaEverydayActivities_1.0.0_loc3_script5_seq2_rec1_preview_rgb.mp4",
+    "timestamp_sec": 44.45,
+    "clip_start_sec": 14.45,
+    "clip_duration_sec": 60.0,
+    "clip_file": "03_event_verification_loc3_script5_seq2_rec1.mp4",
+    "sample_image_path": "/keyframes/EemBUSpjYw_loc3_script5_seq2_rec1_brown_fabric.jpg",
+    "keyframes": [
+      {
+        "image_path": "/keyframes/EemBUSpjYw_loc3_script5_seq2_rec1_brown_fabric.jpg",
+        "timestamp": 44.45,
+        "object_name": "brown_fabric",
+        "bbox": "704,498,1005,934"
+      }
+    ],
+    "rationale": "Asks whether a specific action occurred."
+  },
+  {
+    "index": 4,
+    "category": "State Verification",
+    "category_slug": "state_verification",
+    "question": "Was the dark door in the living room open or closed when I was watching TV earlier?",
+    "answer": "The dark door in the living room was closed when you were watching TV earlier.",
+    "options": [
+      "The dark door in the living room was unlatched but shut when you were watching TV earlier.",
+      "The dark door in the living room was propped wide open when you were watching TV earlier.",
+      "The dark door in the living room was slightly ajar when you were watching TV earlier.",
+      "The dark door in the living room was locked when you were watching TV earlier.",
+      "The dark door in the living room was closed when you were watching TV earlier."
+    ],
+    "correct_answer": 4,
+    "video_name": "20230607_s1_barbara_wheeler_act1_nkg6zo",
+    "dataset": "nymeria",
+    "source_path": "/mnt/hdd/incSeg_data/nymeria/data/20230607_s1_barbara_wheeler_act1_nkg6zo/20230607_s1_barbara_wheeler_act1_nkg6zo_preview_rgb.mp4",
+    "timestamp_sec": 432.0,
+    "clip_start_sec": 402.0,
+    "clip_duration_sec": 60.0,
+    "clip_file": "04_state_verification_20230607_s1_barbara_wheeler_act1_nkg6zo.mp4",
+    "sample_image_path": "/keyframes/Nymeria_20230607_s1_barbara_wheeler_act1_nkg6zo_ocRMkZpuVIRZOvIG.jpg",
+    "keyframes": [
+      {
+        "image_path": "/keyframes/Nymeria_20230607_s1_barbara_wheeler_act1_nkg6zo_ocRMkZpuVIRZOvIG.jpg",
+        "timestamp": 432.0,
+        "object_name": "door",
+        "bbox": ""
+      }
+    ],
+    "rationale": "Asks for the state of an object."
+  },
+  {
+    "index": 5,
+    "category": "Spatial-Spatial",
+    "category_slug": "spatial_spatial",
+    "question": "When I was looking at the salt stones by the humidifier, where was the blue bucket positioned relative to the trash can?",
+    "answer": "The blue bucket was on the floor, to the right of the silver trash can and under the dark cabinet.",
+    "options": [
+      "The blue bucket was on the floor, to the right of the silver trash can and under the dark cabinet.",
+      "The blue bucket was on the floor, to the left of the silver trash can and by the living room couch.",
+      "The blue bucket was on the floor, behind the silver trash can and near the white wall.",
+      "The blue bucket was on the floor, in front of the silver trash can and next to the humidifier.",
+      "The blue bucket was on the floor, between the silver trash can and the large plant."
+    ],
+    "correct_answer": 0,
+    "video_name": "20230929_s0_samuel_campos_act2_uxt33r",
+    "dataset": "nymeria",
+    "source_path": "/mnt/hdd/incSeg_data/nymeria/data/20230929_s0_samuel_campos_act2_uxt33r/20230929_s0_samuel_campos_act2_uxt33r_preview_rgb.mp4",
+    "timestamp_sec": 265.0,
+    "clip_start_sec": 235.0,
+    "clip_duration_sec": 60.0,
+    "clip_file": "05_spatial_spatial_20230929_s0_samuel_campos_act2_uxt33r.mp4",
+    "sample_image_path": "/keyframes/7493795971406506_bbox_265.0s_blue_bucket_399_399_598_598.jpg",
+    "keyframes": [
+      {
+        "image_path": "/keyframes/7493795971406506_bbox_265.0s_blue_bucket_399_399_598_598.jpg",
+        "timestamp": 265.0,
+        "object_name": "blue bucket",
+        "bbox": "399,399,598,598"
+      }
+    ],
+    "rationale": "Asks about the relative location between two objects."
+  },
+  {
+    "index": 6,
+    "category": "Direct Location",
+    "category_slug": "direct_location",
+    "question": "Where did I leave my black headphone case in the living room earlier?",
+    "answer": "It was on the corner of the white dining table.",
+    "options": [
+      "It was on the shelf of the metal TV stand.",
+      "It was in the center of the white dining table.",
+      "It was on the corner of the white dining table.",
+      "It was on the white windowsill.",
+      "It was on the corner of the wooden coffee table."
+    ],
+    "correct_answer": 2,
+    "video_name": "loc3_script3_seq1_rec1",
+    "dataset": "aria_everyday",
+    "source_path": "/mnt/hdd/incSeg_data/aria_everyday/loc3_script3_seq1_rec1/AriaEverydayActivities_1.0.0_loc3_script3_seq1_rec1_preview_rgb.mp4",
+    "timestamp_sec": 26.6,
+    "clip_start_sec": 0.0,
+    "clip_duration_sec": 60.0,
+    "clip_file": "06_direct_location_loc3_script3_seq1_rec1.mp4",
+    "sample_image_path": "/keyframes/AEA_loc3_script3_seq1_rec1_085BWA3NJTe07Rk5.jpg",
+    "keyframes": [
+      {
+        "image_path": "/keyframes/AEA_loc3_script3_seq1_rec1_085BWA3NJTe07Rk5.jpg",
+        "timestamp": 26.6,
+        "object_name": "headphone_case",
+        "bbox": ""
+      }
+    ],
+    "rationale": "Asks for the absolute location of an item."
+  },
+  {
+    "index": 7,
+    "category": "Temporal-Spatial",
+    "category_slug": "temporal_spatial",
+    "question": "After I used the fork to poke the food in the bowl while heating my meal, where did I put it?",
+    "answer": "on the white plate on the kitchen countertop in front of the microwave",
+    "options": [
+      "on the paper towel on the kitchen countertop in front of the microwave",
+      "on the black plate on the dining table near the microwave",
+      "in the bowl on the kitchen countertop behind the microwave",
+      "on the white plate on the kitchen countertop in front of the microwave",
+      "in the sink on the kitchen countertop next to the microwave"
+    ],
+    "correct_answer": 3,
+    "video_name": "20230808_s0_timothy_taylor_act0_3cgk3y",
+    "dataset": "nymeria",
+    "source_path": "/mnt/hdd/incSeg_data/nymeria/data/20230808_s0_timothy_taylor_act0_3cgk3y/20230808_s0_timothy_taylor_act0_3cgk3y_preview_rgb.mp4",
+    "timestamp_sec": 358.7,
+    "clip_start_sec": 328.7,
+    "clip_duration_sec": 60.0,
+    "clip_file": "07_temporal_spatial_20230808_s0_timothy_taylor_act0_3cgk3y.mp4",
+    "sample_image_path": "/keyframes/5963570623638590_bbox_358.7s_a_fork_598_798_798_997.jpg",
+    "keyframes": [
+      {
+        "image_path": "/keyframes/5963570623638590_bbox_358.7s_a_fork_598_798_798_997.jpg",
+        "timestamp": 358.7,
+        "object_name": "a fork",
+        "bbox": "598,798,798,997"
+      }
+    ],
+    "rationale": "Asks where an item is after another event occurs."
+  },
+  {
+    "index": 8,
+    "category": "Others",
+    "category_slug": "others",
+    "question": "I'm in the kitchen, by the microwave above the counter, needing to reheat dinner. What was the microwave's last timer setting?",
+    "answer": "The timer displayed '9:47'.",
+    "options": [
+      "The timer displayed '10:15'.",
+      "The timer displayed '7:18'.",
+      "The timer displayed '2:05'.",
+      "The timer displayed '5:32'.",
+      "The timer displayed '9:47'."
+    ],
+    "correct_answer": 4,
+    "video_name": "20230808_s0_timothy_taylor_act0_3cgk3y",
+    "dataset": "nymeria",
+    "source_path": "/mnt/hdd/incSeg_data/nymeria/data/20230808_s0_timothy_taylor_act0_3cgk3y/20230808_s0_timothy_taylor_act0_3cgk3y_preview_rgb.mp4",
+    "timestamp_sec": 592.0,
+    "clip_start_sec": 562.0,
+    "clip_duration_sec": 60.0,
+    "clip_file": "08_others_20230808_s0_timothy_taylor_act0_3cgk3y.mp4",
+    "sample_image_path": "/keyframes/6844621290755864_bbox_592.0s_microwave_panel_399_798_598_997.jpg",
+    "keyframes": [
+      {
+        "image_path": "/keyframes/6844621290755864_bbox_592.0s_microwave_panel_399_798_598_997.jpg",
+        "timestamp": 592.0,
+        "object_name": "microwave panel",
+        "bbox": "399,798,598,997"
+      }
+    ],
+    "rationale": "Asks for displayed numeric/text information, outside the main spatial, event, state, and appearance classes."
+  }
+]

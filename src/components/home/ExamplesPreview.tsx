@@ -1,22 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 
+import { ExampleBrowser } from "@/components/home/ExampleBrowser";
 import { SectionHeader } from "@/components/home/SectionHeader";
 import { paperAssets } from "@/lib/content";
-
-const exampleNotes = [
-  {
-    label: "Question type",
-    body: "Generated MCQs are manually classified into eight categories, including temporal-spatial, spatial-spatial, appearance, item presence, state verify, event verify, direct location, and others."
-  },
-  {
-    label: "Question text",
-    body: "The synthesizer drafts daily-life questions around a selected target object, then gathers additional video evidence before finalizing the multiple-choice item."
-  },
-  {
-    label: "Evidence and labels",
-    body: "Figure 4 links frames and keywords with color highlights: target objects, contextual entities, missing target regions, ground-truth labels, and VLM predictions."
-  }
-];
 
 export function ExamplesPreview() {
   return (
@@ -52,23 +38,7 @@ export function ExamplesPreview() {
             />
           </article>
 
-          <div className="grid gap-4">
-            {exampleNotes.map((note, index) => (
-              <article key={note.label} className="border border-ink/15 bg-paper p-5">
-                <div className="flex items-center justify-between border-b border-ink/15 pb-3">
-                  <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-warm">
-                    {note.label}
-                  </h3>
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted">
-                    0{index + 1}
-                  </span>
-                </div>
-                <p className="mt-5 text-sm leading-6 text-muted">
-                  {note.body}
-                </p>
-              </article>
-            ))}
-          </div>
+          <ExampleBrowser />
         </div>
       </div>
     </section>

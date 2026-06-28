@@ -90,6 +90,177 @@ export const paperAssets = {
   resultsTable: assetPath("/paper-assets/results-table.png")
 };
 
+const selectedQuestionsDir = assetPath(
+  "/paper-assets/processed_egoeverything/selected_questions_videos"
+);
+
+export type SelectedExample = {
+  index: number;
+  category: string;
+  categorySlug: string;
+  question: string;
+  answer: string;
+  options: string[];
+  correctAnswer: number;
+  timestampSec: number;
+  objectName: string;
+  rationale: string;
+  videoSrc: string;
+};
+
+export const selectedExamples: SelectedExample[] = [
+  {
+    index: 1,
+    category: "Item Presence",
+    categorySlug: "item_presence",
+    question: "Was there a red and white chevron blanket on the sofa in the living room?",
+    answer: "Yes, it was on the armrest of the sofa.",
+    options: [
+      "Yes, it was on the armrest of the sofa.",
+      "No, there was a plain red blanket on the sofa.",
+      "No, an orange and blue striped blanket was on the sofa.",
+      "Yes, but it was on the floor next to the sofa.",
+      "Yes, but it was folded neatly on the cushion of the sofa."
+    ],
+    correctAnswer: 0,
+    timestampSec: 88.9,
+    objectName: "striped blanket",
+    rationale: "Asks whether a specific item appears in a specified place.",
+    videoSrc: `${selectedQuestionsDir}/01_item_presence_loc3_script3_seq2_rec1.mp4`
+  },
+  {
+    index: 2,
+    category: "Appearance",
+    categorySlug: "appearance",
+    question: "What color was the balloon in the living room when someone entered?",
+    answer: "Purple",
+    options: ["Blue", "Purple", "Green", "Red", "Yellow"],
+    correctAnswer: 1,
+    timestampSec: 12.3,
+    objectName: "balloon",
+    rationale: "Asks for a visual attribute of an item.",
+    videoSrc: `${selectedQuestionsDir}/02_appearance_loc1_script3_seq1_rec1.mp4`
+  },
+  {
+    index: 3,
+    category: "Event Verification",
+    categorySlug: "event_verification",
+    question: "Did I put the brown fabric in while doing the laundry?",
+    answer:
+      "Yes, you picked it up with a pile of clothes from on top of the washing machine and then placed them inside.",
+    options: [
+      "Yes, you picked it up with a pile of clothes from on top of the washing machine and then placed them inside.",
+      "No, the brown fabric remained on the washing machine with other clothes.",
+      "Yes, you placed the brown fabric into the top loader of the washing machine separately.",
+      "No, you only put in white clothes, and the brown fabric was not among them.",
+      "Yes, you put in the brown fabric first before setting up the machine."
+    ],
+    correctAnswer: 0,
+    timestampSec: 44.45,
+    objectName: "brown fabric",
+    rationale: "Asks whether a specific action occurred.",
+    videoSrc: `${selectedQuestionsDir}/03_event_verification_loc3_script5_seq2_rec1.mp4`
+  },
+  {
+    index: 4,
+    category: "State Verification",
+    categorySlug: "state_verification",
+    question: "Was the dark door in the living room open or closed when I was watching TV earlier?",
+    answer: "The dark door in the living room was closed when you were watching TV earlier.",
+    options: [
+      "The dark door in the living room was unlatched but shut when you were watching TV earlier.",
+      "The dark door in the living room was propped wide open when you were watching TV earlier.",
+      "The dark door in the living room was slightly ajar when you were watching TV earlier.",
+      "The dark door in the living room was locked when you were watching TV earlier.",
+      "The dark door in the living room was closed when you were watching TV earlier."
+    ],
+    correctAnswer: 4,
+    timestampSec: 432.0,
+    objectName: "door",
+    rationale: "Asks for the state of an object.",
+    videoSrc: `${selectedQuestionsDir}/04_state_verification_20230607_s1_barbara_wheeler_act1_nkg6zo.mp4`
+  },
+  {
+    index: 5,
+    category: "Spatial-Spatial",
+    categorySlug: "spatial_spatial",
+    question:
+      "When I was looking at the salt stones by the humidifier, where was the blue bucket positioned relative to the trash can?",
+    answer: "The blue bucket was on the floor, to the right of the silver trash can and under the dark cabinet.",
+    options: [
+      "The blue bucket was on the floor, to the right of the silver trash can and under the dark cabinet.",
+      "The blue bucket was on the floor, to the left of the silver trash can and by the living room couch.",
+      "The blue bucket was on the floor, behind the silver trash can and near the white wall.",
+      "The blue bucket was on the floor, in front of the silver trash can and next to the humidifier.",
+      "The blue bucket was on the floor, between the silver trash can and the large plant."
+    ],
+    correctAnswer: 0,
+    timestampSec: 265.0,
+    objectName: "blue bucket",
+    rationale: "Asks about the relative location between two objects.",
+    videoSrc: `${selectedQuestionsDir}/05_spatial_spatial_20230929_s0_samuel_campos_act2_uxt33r.mp4`
+  },
+  {
+    index: 6,
+    category: "Direct Location",
+    categorySlug: "direct_location",
+    question: "Where did I leave my black headphone case in the living room earlier?",
+    answer: "It was on the corner of the white dining table.",
+    options: [
+      "It was on the shelf of the metal TV stand.",
+      "It was in the center of the white dining table.",
+      "It was on the corner of the white dining table.",
+      "It was on the white windowsill.",
+      "It was on the corner of the wooden coffee table."
+    ],
+    correctAnswer: 2,
+    timestampSec: 26.6,
+    objectName: "headphone case",
+    rationale: "Asks for the absolute location of an item.",
+    videoSrc: `${selectedQuestionsDir}/06_direct_location_loc3_script3_seq1_rec1.mp4`
+  },
+  {
+    index: 7,
+    category: "Temporal-Spatial",
+    categorySlug: "temporal_spatial",
+    question:
+      "After I used the fork to poke the food in the bowl while heating my meal, where did I put it?",
+    answer: "on the white plate on the kitchen countertop in front of the microwave",
+    options: [
+      "on the paper towel on the kitchen countertop in front of the microwave",
+      "on the black plate on the dining table near the microwave",
+      "in the bowl on the kitchen countertop behind the microwave",
+      "on the white plate on the kitchen countertop in front of the microwave",
+      "in the sink on the kitchen countertop next to the microwave"
+    ],
+    correctAnswer: 3,
+    timestampSec: 358.7,
+    objectName: "a fork",
+    rationale: "Asks where an item is after another event occurs.",
+    videoSrc: `${selectedQuestionsDir}/07_temporal_spatial_20230808_s0_timothy_taylor_act0_3cgk3y.mp4`
+  },
+  {
+    index: 8,
+    category: "Others",
+    categorySlug: "others",
+    question:
+      "I'm in the kitchen, by the microwave above the counter, needing to reheat dinner. What was the microwave's last timer setting?",
+    answer: "The timer displayed '9:47'.",
+    options: [
+      "The timer displayed '10:15'.",
+      "The timer displayed '7:18'.",
+      "The timer displayed '2:05'.",
+      "The timer displayed '5:32'.",
+      "The timer displayed '9:47'."
+    ],
+    correctAnswer: 4,
+    timestampSec: 592.0,
+    objectName: "microwave panel",
+    rationale: "Asks for displayed numeric/text information, outside the main spatial, event, state, and appearance classes.",
+    videoSrc: `${selectedQuestionsDir}/08_others_20230808_s0_timothy_taylor_act0_3cgk3y.mp4`
+  }
+];
+
 export const paperVisuals = [
   {
     figure: "Fig. 3",
